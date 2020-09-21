@@ -41,13 +41,21 @@
     </p>
     </div>
     <br>
+    <div id="example-2" style="float:right">
+  <button v-on:click="counter += 1">Cuenta tus hobbies</button>
+  <p>Número de hobbies: {{ counter }}</p>
+</div>
+      <div>
      <ul id="example-1">
   <li v-for="item in items">
     {{ item.mensaje }}
   </li>
 </ul>
-
-  
+</div>
+<div id="example-3">
+  <input v-model="message3" placeholder="edíteme">
+  <p>El mensaje es: {{ message3 }}</p>
+</div>
 </div>
   <script src="https://npmcdn.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -82,6 +90,22 @@
     ]
   }
 })
+  </script>
+  <script>
+        var example1 = new Vue({
+      el: '#example-2',
+      data: {
+        counter: 0
+      }
+    })
+  </script>
+  <script>
+    var example3 = new Vue({
+      el: '#example-3',
+      data: {
+        message3: ''
+      }
+    })
   </script>
   <!--
   <script>
