@@ -10,7 +10,7 @@
 <body>
     
    
-  
+  <!-- 
   <div class="container" style="margin-left: 40%; margin-top: 50px;">
     <div id="exercise">
         <p>Nombre {{ name }}</p>
@@ -26,11 +26,29 @@
 
     <p v-if="!isHidden">Haga clic en el boton para esconder o aparecer</p>
   </div>
-  
+-->
+  <div class="container">
   <div id="app">
       {{message}}
     </div>
+    <br>
+  <div id="pasatiempo">
+    <button class="btn btn-primary" v-on:click="isHidden = !isHidden">Mostrar pasatiempos</button>
+    
+    <p v-if="!isHidden">
+      <br>
+        <img src="hobbies.jpg" alt="Hobbies" width="600" height="300">      
+    </p>
+    </div>
+    <br>
+     <ul id="example-1">
+  <li v-for="item in items">
+    {{ item.mensaje }}
+  </li>
+</ul>
 
+  
+</div>
   <script src="https://npmcdn.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script>
@@ -41,14 +59,31 @@
       }
     })
   </script>
+  
   <script>
     var app = new Vue({
-      el: '#hide',
+      el: '#pasatiempo',
       data: {
         isHidden: false
       }
     })
   </script>
+
+  <script>
+  var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { mensaje: 'Leer' },
+      { mensaje: 'Jugar Tennis' },
+      { mensaje: 'Ver docuseries' },
+      { mensaje: 'Hacer ejercicio' },
+      { mensaje: 'Escuchar podcasts' }
+    ]
+  }
+})
+  </script>
+  <!--
   <script>
     var app2=new Vue({
       el: '#exercise',
@@ -57,6 +92,7 @@
       }
   });
   </script>
+-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
