@@ -23,31 +23,55 @@
     <br>
 
     <div id="pasatiempo">
-      <button class="btn btn-primary" v-on:click="isHidden = !isHidden">Mostrar pasatiempos</button>
+      <button class="btn btn-primary" v-on:click="isHidden = !isHidden">Turismo</button>
       
       <p v-if="!isHidden">
         <br>
-        <img src="hobbies.jpg" alt="Hobbies" width="600" height="300" class="center">      
+        <img src="turismo.jpg" alt="Hobbies" width="600" height="350" class="center">      
       </p>
     </div>
 
     <br>
     <div id="example-2" style="float:right">
-      <button v-on:click="counter += 1">Cuenta tus hobbies</button>
-    <p>Número de hobbies: {{ counter }}</p>
+      	<button v-on:click="counter += 1">Zonas Turísticas</button>
+	    <div v-if="counter == 0">
+	    	<p>Fundidora</p>
+	    	<img src="fundidora.jpg" alt="Hobbies" width="500" height="250" class="center">
+	    </div>
+	    <div v-else-if="counter==1">
+	    	<p>Chipinque</p>
+	    	<img src="chipinque.jpg" alt="Hobbies" width="500" height="250" class="center">
+	    </div>
+	    <div v-else-if="counter==2">
+	    	<p>Santiago, Nuevo León</p>
+	    	<img src="santiago.jpg" alt="Hobbies" width="500" height="250" class="center">
+	    </div>
+	    <div v-else-if="counter==3">
+	    	<p>Cascada de Chipitín</p>
+	    	<img src="chipitin.jpg" alt="Hobbies" width="500" height="250" class="center">
+	    </div>
+	    <div v-else-if="counter==4">
+	    	<p>Museo MARCO</p>
+	    	<img src="marco.jpg" alt="Hobbies" width="500" height="250" class="center">
+	    </div>
+	    <div v-else>
+	    	<p>Fundidora</p>
+	    	<img src="fundidora.jpg" alt="Hobbies" width="500" height="250" class="center">
+	    	{{counter = 0}}
+	    </div>
     </div>
 
     <div>
       <ul id="example-1">
         <li v-for="item in items">
-          {{ item.mensaje }}
+          <a v-bind:href="item.href">{{ item.mensaje }}</a>
         </li>
       </ul>
     </div>
 
     <div id="example-3">
-      <input v-model="message3" placeholder="Hobby">
-      <p>¿Cuál es tu hobby preferido?: {{ message3 }}</p>
+      <input v-model="message3" placeholder="Zona">
+      <p>¿Cuál es tu zona turística preferida?: {{ message3 }}</p>
     </div>
 
 </div>
@@ -73,11 +97,11 @@
       el: '#example-1',
       data: {
         items: [
-          { mensaje: 'Leer' },
-          { mensaje: 'Jugar Tennis' },
-          { mensaje: 'Ver docuseries' },
-          { mensaje: 'Hacer ejercicio' },
-          { mensaje: 'Escuchar podcasts' }
+          { mensaje: 'Parque Fundidora',  href: "https://www.parquefundidora.org/"},
+          { mensaje: 'Parque Ecológico Chipinque', href: "https://www.chipinque.org.mx/"},
+          { mensaje: 'Santiago, Nuevo León', href: "https://www.gob.mx/sectur/articulos/santiago-nuevo-leon" },
+          { mensaje: 'Cascada de Chipitín', href: "https://nuevoleon.travel/experiencias/cascada-de-chipitin/" },
+          { mensaje: 'Museo Marco', href: "http://www.marco.org.mx/index.pl?i=235" }
         ]
       }
     })
