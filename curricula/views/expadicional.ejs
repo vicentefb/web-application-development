@@ -68,31 +68,20 @@
         </ul>
     </div>
 
-
+    <% for(var i = 0;i < data.length;i++) { %>
 	<div class="tab-content" style="background-color: #aaa1">
         <div class="row">
             <div class="col" style="background-color: #aaa2" align="center">
-                <b>Smart Ride, Google CodeU Program (May 2019 – July 2019).</b>
+                <b><%=data[i].text_title%></b>
             </div>
         </div>
         <div class="row">
             <ul>
-                <li>Collaborated with other software engineers to design a web application using Java, JavaScript, HTML and CSS over the course of 10 weeks, leveraging various Google Cloud Platform APIs, including App Engine and Datastore.</li>
-                <li>Practiced industry best practices such as: contributing to open source software using Git and GitHub, conducting code reviews with/for teammates, extending an existing codebase, participating in distributed development, designing new components and interfaces and leading them to completion.</li>
-                <li>Implemented Google Maps API into the web app which included Geolocation, Autocomplete, Waypoints and Directions services/features, as well as code involving POST request to communicate with the backend using JavaScript and HTML.</li>
-            </ul>
-        </div>
-        <div class="row">
-            <div class="col" style="background-color: #aaa2" align="center">
-                <b>CPSC 425, Computer Vision. Image Recognition (April 2019).</b>
-            </div>
-        </div>
-        <div class="row">
-            <ul>
-                <li>Ranked on one of the top 5 accuracies for KNN classifier (43.7%) among 140+ students using Python, bag of visual words and SIFT as a feature extractor algorithm to implement a classification approach for image recognition.</li>
+                <li><%=data[i].text_exp%></li>
             </ul>
         </div>
     </div>
+    <% } %>
 
 
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
