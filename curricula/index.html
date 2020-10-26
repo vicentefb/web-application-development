@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
-<title>9323</title>
-<html lang="en" id="top">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currícula VFB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+            .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+</head>
 
-  </head>
-<body>
-    <nav class="navbar navbar-fixed-top navbar-light bg-light">
+<body style="background-color:#d5f4f7;">
+	<nav class="navbar navbar-fixed-top navbar-light bg-light">
         <a class="navbar-brand" href="#top">Vicente Ferrara</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,40 +61,28 @@
         </ul>
     </div>
 
-    <div class="tab-content" style="background-color: #aaa1">
+	<div class="tab-content" style="background-color: #aaa1">
         <div role="tabpanel" class="tab-pane active" id="inicio" style="text-align: center">
             Bienvenido, aquí encontrarás información sobre mi. 
         </div>
         <div role="tabpanel" class="tab-pane" id="educacion">
-            <div class="row">
-                <div class="col-6" style="background-color: #aaa2" align="center">
-                    <b>The University of British Columbia, Vancouver (Exchange Program)</b>
-                </div>
+            <dl class="row">
+			  <dt class="col-sm-3">Tecnologico de Monterrey</dt>
+			  <dd class="col-sm-9"><%=data[0].vc_educacion%>.</dd>
 
-                <div class="col-6" style="background-color: #aaa2" align="center">
-                    <b>January 2019 - April 2019, January 2020 – April 2020 (ELAP award recipient)</b>
-                </div>
-            </div>
-            <div class="row">
-                <ul>
-                    <li>Relevant Coursework: Blockchain Software Engineering, Foundations of Blockchain and Distributed Ledger, Computer Vision, Applied Machine Learning, Business Programming and Analytics, Introduction to Data Science and Software Project Management.</li>
-                </ul>
-            </div>
-            <div class="row">
-                <div class="col-6" style="background-color: #aaa2" align="center">
-                    <b>Tec de Monterrey, Campus Monterrey</b>
-                </div>
+			  <dt class="col-sm-3">Euismod</dt>
+			  <dd class="col-sm-9">
+			    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+			    <p>Donec id elit non mi porta gravida at eget metus.</p>
+			  </dd>
 
-                <div class="col-6" style="background-color: #aaa2" align="center">
-                    <b>August 2015 - December 2020</b>
-                </div>
-            </div>
-            <div class="row">
-                <ul>
-                    <li>B.S. Computer Engineer</li>
-                    <li>In-major grade: 95</li>
-                </ul>
-            </div>
+			  <dt class="col-sm-3">Malesuada porta</dt>
+			  <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+			  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+			  <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+
+			</dl>
         </div>
         <div role="tabpanel" class="tab-pane" id="profesional">
             <div class="row">
@@ -203,10 +195,15 @@
             </ul>
         </div>
     </div>
-    
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <img src="tec.png" class="img-fluid" alt="Responsive image">
+
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
 </body>
 </html>
