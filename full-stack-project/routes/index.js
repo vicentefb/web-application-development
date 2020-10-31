@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-	res.send('Hello')	
+	res.render('index')	
 })
 
 // We are able to export our router variable so other files are allowed
