@@ -1,33 +1,113 @@
-<title>Currícula VFB</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currícula VFB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <style>
+            .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
 </head>
-<body>
-<h2 style="font-size:40px"> Vicente </h2>
-<div> 
-<p style="font-weight: bold; font-size:20px"> Educación </p>
-<ul>
-    <li>Tecnológico de Monterrey 2015-2020</li>
-    <ul>
-        <li>Ing. Sistemas Digitales y Robótica</li>
-        <li>GPA: 95/100</li>
-    </ul>
-</ul>
-<p style="font-weight: bold; font-size:20px"> Experiencia </p>
-<ul>
-    <li>Google - Software Engineering Intern Summer - 2020</li>
-    <li>John Deere - Embedded Software Engineering Intern - 2019</li>
-    <li>Yazaki - Semestre-I - 2017</li>
-    <li>EVA - Hardware Developer Intern - 2017 </li>
-</ul>
-<p style="font-weight: bold; font-size:20px"> Experiencia adicional </p>
-<ul>
-    <li>Google CodeU Student - Smart Ride - Summer 2019</li>
-    <li>CPSC 425 - Computer Vision Image Recognition using SIFT - 2019</li>
-</ul>
-<p style="font-weight: bold; font-size:20px"> Lenguajes de Programación y Tecnologías </p>
-<ul>
-    <li>Mas experiencia con: C/C++, Python, C#, R, Arduino, Git</li>
-    <li>Experiencia con: Go, Java, Solidity, Node. js, VHDL, VBA, JavaScript, HTML, Linux</li>
-</ul>
-</div>
+
+<body style="background-color:#d5f4f7;">
+	<h2 style="font-size:40px"> Vicente </h2>
+
+	<div> 
+		<p style="font-weight: bold; font-size:20px"> Educación </p>
+		<ul>
+		    <li>Tecnológico de Monterrey 2015-2020</li>
+		    <div>
+		      <ul id="educacion">
+		        <li v-for="item in items">
+		          {{ item.mensaje }}
+		        </li>
+		      </ul>
+		    </div>
+		</ul>
+		<p style="font-weight: bold; font-size:20px"> Experiencia </p>
+		    <div>
+		      <ul id="experiencia">
+		        <li v-for="item in items">
+		          {{ item.mensaje }}
+		        </li>
+		      </ul>
+		    </div>
+		<p style="font-weight: bold; font-size:20px"> Experiencia adicional </p>
+		    <div>
+		      <ul id="expadicional">
+		        <li v-for="item in items">
+		          {{ item.mensaje }}
+		        </li>
+		      </ul>
+		    </div>
+		<p style="font-weight: bold; font-size:20px"> Lenguajes de Programación y Tecnologías </p>
+		    <div>
+		      <ul id="lenguajes">
+		        <li v-for="item in items">
+		          {{ item.mensaje }}
+		        </li>
+		      </ul>
+		    </div>
+	</div>
+	
+	
+
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    
+    <script>
+    
+    var education = new Vue({
+      el: '#educacion',
+      data: {
+        items: [
+          { mensaje: 'Ing. Sistemas Digitales y Robótica' },
+          { mensaje: 'GPA: 95/100' },
+          { mensaje: 'The University of British Columbia (Exchange Program 2019-2020)' }
+        ]
+      }
+    })
+
+    var experience = new Vue({
+      el: '#experiencia',
+      data: {
+        items: [
+          { mensaje: 'Google - Software Engineering Intern Summer - 2020' },
+          { mensaje: 'John Deere - Embedded Software Engineering Intern - 2019' },
+          { mensaje: 'Yazaki - Semestre-I - 2017' },
+          { mensaje: 'EVA - Hardware Developer Intern - 2017' }
+        ]
+      }
+    })
+
+    var expadicional = new Vue({
+      el: '#expadicional',
+      data: {
+        items: [
+          { mensaje: 'Google CodeU Student - Smart Ride - Summer 2019' },
+          { mensaje: 'CPSC 425 - Computer Vision Image Recognition using SIFT - 2019' }
+        ]
+      }
+    })
+
+    var lenguajes = new Vue({
+      el: '#lenguajes',
+      data: {
+        items: [
+          { mensaje: 'Mas experiencia con: C/C++, Python, C#, R, Arduino, Git' },
+          { mensaje: 'Experiencia con: Go, Java, Solidity, Node. js, VHDL, VBA, JavaScript, HTML, Linux' }
+        ]
+      }
+    })
+
+ 
+  </script>
+
 </body>
 </html>
