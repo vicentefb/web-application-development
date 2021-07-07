@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currícula VFB</title>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <style>
+            .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+       .container-fluid {
+    padding: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.row, .col {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+    </style>
+</head>
+
+<body style="background-color:#d5f4f7;">
+	<nav class="navbar navbar-fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#top">Vicente Ferrara</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.github.com/vicentefb">GitHub <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/vicenteferrarabrondo">LinkedIn</a>
+          </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" style="background-color: #aaa1">
+        <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item">
+                <a class="btn btn-primary" href="/" role="button">Inicio</a>
+                &nbsp;
+            </li>
+
+            <li class="nav-item">
+                <a class="btn btn-primary" href="/education" role="button">Education</a>
+                &nbsp;
+            </li>
+
+            <li class="nav-item">
+                <a class="btn btn-primary" href="/profesional" role="button">Experiencia Profesional</a>
+                &nbsp;
+            </li>
+
+            <li class="nav-item">
+                <a class="btn btn-primary" href="/expadicional" role="button">Experiencia Adicional</a>
+                &nbsp;
+            </li>
+
+        </ul>
+    </div>
+
+    <% for(var i = 0;i < data.length;i++) { %>
+	<div class="tab-content" style="background-color: #aaa1">
+        <div class="row">
+            <div class="col" style="background-color: #aaa2" align="center">
+                <b><%=data[i].text_title%></b>
+            </div>
+        </div>
+        <div class="row">
+            <ul>
+                <li><%=data[i].text_exp%></li>
+            </ul>
+        </div>
+    </div>
+    <% } %>
+
+
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
